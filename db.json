@@ -52,7 +52,7 @@
       "description": "Leo's Order",
       "payment": "Visa",
       "storeId": "1",
-      "id": 1
+      "id": "1"
     },
     {
       "date": "01-04-2012",
@@ -60,7 +60,7 @@
       "description": "James's Order",
       "payment": "Visa",
       "storeId": "1",
-      "id": 2
+      "id": "2"
     },
     {
       "date": "01-04-2012",
@@ -68,8 +68,25 @@
       "description": "Amy's Order",
       "payment": "Visa",
       "storeId": "1",
-      "id": 3
+      "id": "3"
     }
   ],
-  "lineItems":[]
+  "lineItems": [
+    {
+      "id": "1",
+      "quantity": "2",
+      "price": "50",
+      "delivery": "rush",
+      "productId": "1",
+      "orderId": "1"
+    },
+    {
+      "id": "2",
+      "quantity": "6",
+      "price": "250",
+      "delivery": "3 days",
+      "productId": "1",
+      "orderId": "1"
+    }
+  ]
 }
