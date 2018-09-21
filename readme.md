@@ -49,12 +49,30 @@ In order to query an element please use this syntax examples:
 
 ```
 // Store details
+// Return id, name, location & country
 {
     store(id: "1"){
         id
         name
         location
         country
+    }
+}
+```
+
+```
+// Store details with nested information
+// Able to pull product details associated with the store
+store(id:"1"){
+    id
+    name
+    location,
+    country
+    product{
+        id
+        name
+        description
+        store
     }
 }
 ```
