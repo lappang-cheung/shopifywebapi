@@ -77,7 +77,7 @@ store(id:"1"){
 }
 ```
 
-In order to do CRUD elements, please wuth this syntax examples:
+In order to do CRUD elements, please with this syntax examples:
 
 ```
 // Adding line item
