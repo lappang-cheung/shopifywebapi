@@ -2,7 +2,7 @@
   "stores": [
     {
       "id": "1",
-      "name": "ToyRus",
+      "name": "FutureShop",
       "location": "Toronto",
       "country": "CA"
     },
@@ -16,9 +16,9 @@
   "products": [
     {
       "id": "1",
-      "name": "iphone 6s",
+      "name": "iphone 3gs toy",
       "description": "Latest iphone",
-      "storeId": "2"
+      "storeId": "1"
     },
     {
       "id": "2",
