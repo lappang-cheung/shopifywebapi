@@ -45,7 +45,7 @@ Requirements:
 
 # GraphQL Query and Mutation Commands
 
-In order to query an element please use this syntax examples:
+In order to query an elements, please use this syntax examples:
 
 ```
 // Store details
@@ -74,6 +74,30 @@ store(id:"1"){
         description
         store
     }
+}
+```
+
+In order to do CRUD elements, please wuth this syntax examples:
+
+```
+// Adding line item
+/** 
+  * 1. "mutation" keyword must be present before executing the operation
+  * 2. Call the method and put in the required parameters also values
+  * 3. Add in all the parameters you want to display after the execution is done
+*/
+mutation{
+  addLineItem(quantity: 2, price: 50, delivery: "rush", productId:"1", orderId: "1"){
+    id
+    price
+    delivery
+    product{
+      name
+    }
+    order{
+     	description 
+    }
+  }
 }
 ```
 
