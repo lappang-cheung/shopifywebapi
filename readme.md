@@ -25,7 +25,7 @@ Requirements for each object type
  
 Products, Line Items and Orders all need a dollar value The value of a Line Item should map to the value of the Product that the Line Item represents The total value of an Order should equal the sum of the values of all of its Line Items 
  
-####Demo requirements 
+#### Demo requirements 
  
 All of the functionality of your API should be documented so we know what it does, and how to interact with it. 
  
