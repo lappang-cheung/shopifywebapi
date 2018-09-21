@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [Installation](#installation)
 
+- [GraphQL Query and Mutation Commands](#graphql-query-and-mutation-commands)
+
 - [Project Demo](#project-demo)
 
 
@@ -40,6 +42,22 @@ Requirements:
 2. To execute the application have two windows open
 3. First execute "npm run json:server" on first window and execute "npm run start"
 4. Graphql server is located on "http://localhost:4000/graphql"
+
+# GraphQL Query and Mutation Commands
+
+In order to query an element please use this syntax examples:
+
+```
+// Store details
+{
+    store(id: "1"){
+        id
+        name
+        location
+        country
+    }
+}
+```
 
 # Project Demo
 
