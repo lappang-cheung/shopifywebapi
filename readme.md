@@ -281,7 +281,7 @@ Takes three parameters and cannot be empty before creating a store object
 }
 ```
 
-#### editStore(id: ID, name: String, location: String, country: String)
+#### editStore(id: ID!, name: String, location: String, country: String)
 Takes ID parameters and three optional parameters, then updates from the input given by the optional parameter
 ```
 {
@@ -294,7 +294,7 @@ Takes ID parameters and three optional parameters, then updates from the input g
 }
 ```
 
-#### deleteStore(id: ID){
+#### deleteStore(id: ID!){
   Takes ID parameter and removes from the database
   {
     deleteStore(id: "122345"){
@@ -302,6 +302,161 @@ Takes ID parameters and three optional parameters, then updates from the input g
       name
       location
       country
+    }
+  }
+}
+
+#### addProduct( name: String!, description: String!, storeID: ID! )
+Takes three parameters and cannot be empty before creating a product object
+```
+{
+  addProduct(name: "Fakeshop", description: "Fake description", storeID: "store123"){
+    id
+    name
+    description
+  }
+}
+```
+
+#### editStore(id: ID!, name: String, description: String, storeID: ID)
+Takes ID parameters and three optional parameters, then updates from the input given by the optional parameter
+```
+{
+  editProduct(id: "product123", name: "Fakeshop", description: "Fake description", storeID: "store123"){
+    id
+    name
+    description
+  }
+}
+```
+
+#### deleteProduct(id: ID!){
+  Takes ID parameter and removes from the database
+  {
+    deleteProduct(id: "122345"){
+      id
+      name
+      description
+    }
+  }
+}
+
+#### addOrder(date: String!, address: String!, description: String!, payment: String!, "storeId": ID! )
+Takes five parameters and cannot be empty before creating an order object
+```
+{
+  createStore(date: "01-01-2000", address: "123 Fake Street", description:"Fake description", payment: "visa", "storeId": "123456"){
+    id
+    date
+    address
+    description
+    payment
+    store{
+      id
+      name
+      location
+      country
+    }
+  }
+}
+```
+
+#### editOrder(id: ID!, date: String, address: String, description: String, payment: String, "storeId": ID)
+Takes ID parameters and six optional parameters, then updates from the input given by the optional parameter
+```
+{
+  editStore(date: "01-01-2000", address: "123 Fake Street", description:"Fake description", payment: "visa", "storeId": "123456"){
+    id
+    date
+    address
+    description
+    payment
+    store{
+      id
+      name
+      location
+      country
+    }
+  }
+}
+```
+
+#### deleteOrder(id: ID!){
+  Takes ID parameter and removes from the database
+  {
+    deleteOrder(id: "122345"){
+      id
+      date
+      address
+      description
+      payment
+      store{
+        id
+        name
+        location
+        country
+      }
+    }
+  }
+}
+
+#### addLineItem(quantity: Int!, price: Int!, delivery: String!, productId: ID!, orderId: ID! )
+Takes five parameters and cannot be empty before creating a store object
+```
+{
+  addLineItem(quantity:1, price: 600, delivery:"rush", productId:"pro123", orderId:"ord123"){
+    quantity
+    price
+    delivery
+    product{
+      id
+      name
+      description
+    }
+    order{
+      id
+      address
+    }
+  }
+}
+```
+
+#### editLineItem(id: ID!, quantity: Int, price: Int, delivery: String, productId: ID, orderId: ID)
+Takes ID parameters and five optional parameters, then updates from the input given by the optional parameter
+```
+{
+  editLineItem(id: ID!, quantity:1, price: 600, delivery:"rush", productId:"pro123", orderId:"ord123"){
+    quantity
+    price
+    delivery
+    product{
+      id
+      name
+      description
+    }
+    order{
+      id
+      address
+    }
+  }
+}
+```
+
+#### deleteLineItem(id: ID){
+  Takes ID parameter and removes from the database
+  {
+    deleteStore(id: "122345"){
+      quantity
+      price
+      delivery
+      product{
+        id
+        name
+        description
+      }
+      order{
+        id
+        address
     }
   }
 }
