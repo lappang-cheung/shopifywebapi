@@ -152,6 +152,120 @@ Take no parameters and return all the products
   }
 }
 ```
+
+#### order(id: ID)
+Takes a id parameter and return the following:
+- id          : ID
+- date        : String
+- address     : String
+- description : String
+- payment     : String
+- store       : Store
+- lineItems   : lineItem
+```
+{
+  store(id: "abc123"){
+    id
+    date
+    address
+    description
+    payment
+    store{
+      id
+      name
+      location
+      country
+    }
+    lineItems{
+      id
+      quantity
+      price
+      delivery
+    }
+  }
+}
+```
+#### orders
+Take no parameters and return all the orders
+```
+{
+  orders{
+    id
+    date
+    address
+    description
+    payment
+    store{
+      id
+      name
+      location
+      country
+    }
+    lineItems{
+      id
+      quantity
+      price
+      delivery
+    }
+  }
+}
+```
+#### lineItem(id: ID)
+Takes a id parameter and return the following:
+- id          : ID
+- quantity    : Int
+- price       : Int
+- delivery    : String
+- product     : Product
+- order       : Order
+```
+{
+  lineItem(id: "abc123"){
+    id
+    quantity
+    price
+    delivery
+    product{
+      id
+      name
+      description
+    }
+    order{
+      id
+      date
+      address
+      description
+      payment
+    }
+  }
+}
+```
+#### lineItems
+Take no parameters and return all the orders
+```
+{
+  lineItems{
+    id
+    quantity
+    price
+    delivery
+    product{
+      id
+      name
+      description
+    }
+    order{
+      id
+      date
+      address
+      description
+      payment
+    }
+  }
+}
+```
+
+
 #### Mutation
 
 
