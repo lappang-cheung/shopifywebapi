@@ -7,7 +7,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "test": "jest lineitem.spec.js",
+    "test": "jest",
     "json:server": "json-server --watch db.json",
     "start": "nodemon lib/server.js"
   },
