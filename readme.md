@@ -8,8 +8,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [Documentations](#documentations)
 
-- [GraphQL Query and Mutation Commands](#graphql-query-and-mutation-commands)
-
 - [Project Demo](#project-demo)
 
 
@@ -50,18 +48,40 @@ Requirements:
 ### RootQueryType
 
 #### store(id: ID)
-Takes a id parameter and return the following
+Takes a id parameter and return the following:
 - id       : ID
 - name     : String
 - location : String
 - country  : String
 - products : Products
-- ordets   : Order
+- orders   : Order
 
-## Mutation
+```
+{
+  store(id: "abc123"){
+    id
+    name
+    location
+    country
+    products{
+      id
+      name
+      description
+    }
+    orders{
+      id
+      date
+      description
+      payment
+      store
+    }
+  }
+}
+```
+
+#### Mutation
 
 
-# GraphQL Query and Mutation Commands
 
 In order to query an elements, please use this syntax examples:
 
