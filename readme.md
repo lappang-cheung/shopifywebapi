@@ -268,63 +268,44 @@ Take no parameters and return all the orders
 
 #### Mutation
 
-
-
-In order to query an elements, please use this syntax examples:
-
+#### createStore(name: String!, location: String!, country: String! )
+Takes three parameters and cannot be empty before creating a store object
 ```
-// Store details
-// Return id, name, location & country
 {
-    store(id: "1"){
-        id
-        name
-        location
-        country
-    }
-}
-```
-
-```
-// Store details with nested information
-// Able to pull product details associated with the store
-store(id:"1"){
+  createStore(name: "Fakeshop", location: "Fakeplace", country:"Fakecountry"){
     id
     name
-    location,
+    location
     country
-    product{
-        id
-        name
-        description
-        store
-    }
-}
-```
-
-In order to do CRUD elements, please with this syntax examples:
-
-```
-// Adding line item
-/** 
-  * 1. "mutation" keyword must be present before executing the operation
-  * 2. Call the method and put in the required parameters also values
-  * 3. Add in all the parameters you want to display after the execution is done
-*/
-mutation{
-  addLineItem(quantity: 2, price: 50, delivery: "rush", productId:"1", orderId: "1"){
-    id
-    price
-    delivery
-    product{
-      name
-    }
-    order{
-     	description 
-    }
   }
 }
 ```
+
+#### editStore(id: ID, name: String, location: String, country: String)
+Takes ID parameters and three optional parameters, then updates from the input given by the optional parameter
+```
+{
+  createStore(id:"123456", name: "Fakeshop", location: "Fakeplace", country:"Fakecountry"){
+    id
+    name
+    location
+    country
+  }
+}
+```
+
+#### deleteStore(id: ID){
+  Takes ID parameter and removes from the database
+  {
+    deleteStore(id: "122345"){
+      id
+      name
+      location
+      country
+    }
+  }
+}
+
 
 # Project Demo
 
