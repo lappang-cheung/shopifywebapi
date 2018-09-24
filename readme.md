@@ -73,12 +73,85 @@ Takes a id parameter and return the following:
       date
       description
       payment
-      store
     }
   }
 }
 ```
 
+#### stores
+Take no parameters and return all the stores
+```
+{
+  stores{
+    id
+    name
+    location
+    country
+    products{
+      id
+      name
+      description
+    }
+    orders{
+      id
+      date
+      description
+      payment
+    }
+  }
+}
+```
+#### product(id: ID)
+Takes a id parameter and return the following:
+- id          : ID
+- name        : String
+- description : String
+- store       : Store
+- lineItems   : lineItem
+```
+{
+  product(id: "abc123"){
+    id
+    name
+    description
+    store{
+      id
+      name
+      location
+      country
+    }
+    lineItems{
+      id
+      quantity
+      price
+      delivery
+    }
+  }
+}
+```
+#### products
+Take no parameters and return all the products
+```
+{
+  products{
+    id
+    name
+    description
+    store{
+      id
+      name
+      location
+      country
+    }
+    lineItems{
+      id
+      quantity
+      price
+      delivery
+    }
+  }
+}
+```
 #### Mutation
 
 
