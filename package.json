@@ -7,10 +7,9 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "test": "jest",
-    "server": "nodemon lib/server.js",
+    "test": "jest product.spec.js",
     "json:server": "json-server --watch db.json",
-    "start": "concurrently \"npm run json:server\" \"npm run server\""
+    "start": "nodemon lib/server.js"
   },
   "author": "",
   "license": "ISC",
