@@ -47,6 +47,18 @@ Requirements:
 
 # Documentations
 
+## RootQueryType
+
+### store(id: ID)
+Takes a id parameter and return the following
+- id       : ID
+- name     : String
+- location : String
+- country  : String
+- products : Products
+- ordets   : Order
+
+## Mutation
 
 
 # GraphQL Query and Mutation Commands
@@ -109,7 +121,7 @@ mutation{
 
 # Project Demo
 
-Project link: <n/a>
+Project link: https://graphqlapiweb.herokuapp.com/graphql
 
 Features:
 - GraphQL explorer is running on port 4000
