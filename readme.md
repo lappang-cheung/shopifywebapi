@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [Installation](#installation)
 
+- [Documentations](#documentations)
+
 - [GraphQL Query and Mutation Commands](#graphql-query-and-mutation-commands)
 
 - [Project Demo](#project-demo)
@@ -42,6 +44,10 @@ Requirements:
 2. To execute the application have two windows open
 3. First execute "npm run json:server" on first window and execute "npm run start"
 4. Graphql server is located on "http://localhost:4000/graphql"
+
+# Documentations
+
+
 
 # GraphQL Query and Mutation Commands
 
@@ -105,5 +111,10 @@ mutation{
 
 Project link: <n/a>
 
-Notes:
-- The application uses local json server is on port 3000 and graphql is on port 4000
+Features:
+- GraphQL explorer is running on port 4000
+- MongoDB for storing the data in real time
+- Jest test cases has been created to test the CRUD functionality
+
+Note(s):
+- To run the testcases, please first update the ID accordingly and then type "npm run test"
