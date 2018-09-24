@@ -47,9 +47,9 @@ Requirements:
 
 # Documentations
 
-## RootQueryType
+### RootQueryType
 
-### store(id: ID)
+#### store(id: ID)
 Takes a id parameter and return the following
 - id       : ID
 - name     : String
