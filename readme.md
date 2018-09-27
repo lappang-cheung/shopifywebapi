@@ -471,3 +471,39 @@ Features:
 
 Note(s):
 - To run the testcases, please first update the ID accordingly and then type "npm run test"
+- The database should have been seed with data and to verify please check with this query
+
+```
+{
+  stores{
+    id
+    name
+    location
+    country
+    products{
+      id
+      name
+      description
+      lineItems{
+        id
+        quantity
+        price
+        delivery
+      }
+    }
+    orders{
+      id
+      date
+      address
+      description
+      payment
+      lineItems{
+        id
+        quantity
+        price
+        delivery
+      }
+    }
+  }
+}
+```
